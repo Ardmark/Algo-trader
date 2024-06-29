@@ -1,0 +1,20 @@
+COMBINING DATABASES:
+
+Had problems with SQL attempts, best way found was to:
+
+1) If a new DB is required, create a copy:
+
+
+/* Timestamp format is yyyy-mm-dd */
+select * into newtable.dbo.SymbolDataItems 
+		 from oldtable.dbo.SymbolDataItems  
+		 where Timestamp > '2020-12-14'
+
+2) This SQL command will copy data across, because the ID property is set as Identity Increment to TRUE:
+	insert into combined.dbo.SymbolDataItems([Timestamp],[Open],[Close],[High],[Low],[SymbolName],[ExchangeId],[Interrupted])
+	select [Timestamp],[Open],[Close],[High],[Low],[SymbolName],[ExchangeId],[Interrupted]
+	from [AlgoTrader.DataContext.Live].dbo.SymbolDataItems
+	
+	- this copies from Live to combined. Note, combined must have .mdf file in App_Data, with appropriate connection string in App.Config
+	
+3) That's it. If working with a copy, can just cut out any unwanted data before running app.

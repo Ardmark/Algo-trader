@@ -1,0 +1,31 @@
+﻿<Window x:Class="AlgoTrader.Shared.Windows.LineMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlgoTrader.Shared"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="Line Menu"
+        SizeToContent="WidthAndHeight"
+        >
+
+    <Menu HorizontalAlignment="Stretch" Background="White">
+        <Menu.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel />
+            </ItemsPanelTemplate>
+        </Menu.ItemsPanel>
+        <MenuItem Header="Order: Line Break (Long)"     Command="{Binding MenuItem0_Command}"></MenuItem>
+        <MenuItem Header="Order: Line Break (Short)"    Command="{Binding MenuItem1_Command}"></MenuItem>
+        <Separator></Separator>
+        <MenuItem Header="Stop"                         Command="{Binding MenuItem3_Command}"></MenuItem>
+        <Separator></Separator>
+        <MenuItem Header="Flip Order"                   Command="{Binding MenuItem2_Command}" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="Flip Order Stop"              Command="{Binding MenuItem4_Command}"></MenuItem>
+        <Separator></Separator>
+        <MenuItem Header="Take Profit"                  Command="{Binding MenuItem5_Command}"></MenuItem>
+        <Separator></Separator>
+        <MenuItem Header="Delete line"                  Command="{Binding MenuItem6_Command}"></MenuItem>
+    </Menu>
+</Window>

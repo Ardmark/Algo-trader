@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?><office:document xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:rpt="http://openoffice.org/2005/report" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.spreadsheet"> <office:meta><meta:creation-date>2021-07-08T11:13:11.575000000</meta:creation-date><dc:date>2021-07-08T11:14:55.649000000</dc:date><meta:editing-duration>PT1M44S</meta:editing-duration><meta:editing-cycles>1</meta:editing-cycles><meta:generator>LibreOffice/7.1.1.2$Windows_X86_64 LibreOffice_project/fe0b08f4af1bacafe4c7ecc87ce55bb426164676</meta:generator><meta:document-statistic meta:table-count="1" meta:cell-count="4" meta:object-count="0"/></office:meta><office:body>  <office:spreadsheet>   <table:table table:name="Sheet1">    <table:table-column />    <table:table-column />
+<table:table-row>
+		<table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Date</text:p></table:table-cell><table:table-cell office:value-type="string" calcext:value-type="string"><text:p>Result</text:p></table:table-cell></table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-02T16:00:00" calcext:value-type="date"><text:p>02/05/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="11.1232279171211"  calcext:value-type="float"><text:p>11.1232279171211</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-04T12:00:00" calcext:value-type="date"><text:p>04/05/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-4.03940886699506"  calcext:value-type="float"><text:p>-4.03940886699506</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-05T00:00:00" calcext:value-type="date"><text:p>05/05/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.504032258064502"  calcext:value-type="float"><text:p>0.504032258064502</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-05T12:00:00" calcext:value-type="date"><text:p>05/05/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.36633663366337"  calcext:value-type="float"><text:p>-3.36633663366337</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-06T00:00:00" calcext:value-type="date"><text:p>06/05/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.48514851485149"  calcext:value-type="float"><text:p>-1.48514851485149</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-06T16:00:00" calcext:value-type="date"><text:p>06/05/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.673724735322434"  calcext:value-type="float"><text:p>-0.673724735322434</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-07T12:00:00" calcext:value-type="date"><text:p>07/05/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-4.32382704691812"  calcext:value-type="float"><text:p>-4.32382704691812</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-08T04:00:00" calcext:value-type="date"><text:p>08/05/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.22283609576427"  calcext:value-type="float"><text:p>-3.22283609576427</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-11T12:00:00" calcext:value-type="date"><text:p>11/05/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.106609808102354"  calcext:value-type="float"><text:p>0.106609808102354</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-13T00:00:00" calcext:value-type="date"><text:p>13/05/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="2.41758241758243"  calcext:value-type="float"><text:p>2.41758241758243</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-13T16:00:00" calcext:value-type="date"><text:p>13/05/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.01724137931033"  calcext:value-type="float"><text:p>-3.01724137931033</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-14T04:00:00" calcext:value-type="date"><text:p>14/05/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="2.12089077412514"  calcext:value-type="float"><text:p>2.12089077412514</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-16T08:00:00" calcext:value-type="date"><text:p>16/05/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.25523012552302"  calcext:value-type="float"><text:p>-1.25523012552302</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-17T00:00:00" calcext:value-type="date"><text:p>17/05/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.24267782426779"  calcext:value-type="float"><text:p>-3.24267782426779</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-17T20:00:00" calcext:value-type="date"><text:p>17/05/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0"  calcext:value-type="float"><text:p>0</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-20T08:00:00" calcext:value-type="date"><text:p>20/05/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="16.4497041420118"  calcext:value-type="float"><text:p>16.4497041420118</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-23T04:00:00" calcext:value-type="date"><text:p>23/05/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-8.8"  calcext:value-type="float"><text:p>-8.8</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-24T00:00:00" calcext:value-type="date"><text:p>24/05/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.627352572145545"  calcext:value-type="float"><text:p>0.627352572145545</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-24T12:00:00" calcext:value-type="date"><text:p>24/05/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="1.22699386503069"  calcext:value-type="float"><text:p>1.22699386503069</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-25T16:00:00" calcext:value-type="date"><text:p>25/05/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="16.9512195121951"  calcext:value-type="float"><text:p>16.9512195121951</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-28T20:00:00" calcext:value-type="date"><text:p>28/05/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-4.43505807814151"  calcext:value-type="float"><text:p>-4.43505807814151</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-29T04:00:00" calcext:value-type="date"><text:p>29/05/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.1087680355161"  calcext:value-type="float"><text:p>-2.1087680355161</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-30T00:00:00" calcext:value-type="date"><text:p>30/05/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.69875424688563"  calcext:value-type="float"><text:p>-1.69875424688563</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-30T08:00:00" calcext:value-type="date"><text:p>30/05/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.01351351351351"  calcext:value-type="float"><text:p>-1.01351351351351</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-05-31T08:00:00" calcext:value-type="date"><text:p>31/05/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.336322869955175"  calcext:value-type="float"><text:p>0.336322869955175</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-01T04:00:00" calcext:value-type="date"><text:p>01/06/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.33630289532295"  calcext:value-type="float"><text:p>-1.33630289532295</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-02T00:00:00" calcext:value-type="date"><text:p>02/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.111982082866757"  calcext:value-type="float"><text:p>0.111982082866757</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-02T16:00:00" calcext:value-type="date"><text:p>02/06/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.886917960088685"  calcext:value-type="float"><text:p>-0.886917960088685</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-03T04:00:00" calcext:value-type="date"><text:p>03/06/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.553097345132736"  calcext:value-type="float"><text:p>0.553097345132736</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-04T20:00:00" calcext:value-type="date"><text:p>04/06/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.799086757990852"  calcext:value-type="float"><text:p>0.799086757990852</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-06T04:00:00" calcext:value-type="date"><text:p>06/06/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.681818181818183"  calcext:value-type="float"><text:p>0.681818181818183</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-07T00:00:00" calcext:value-type="date"><text:p>07/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.43487858719648"  calcext:value-type="float"><text:p>-1.43487858719648</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-09T00:00:00" calcext:value-type="date"><text:p>09/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.99764982373678"  calcext:value-type="float"><text:p>-1.99764982373678</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-10T08:00:00" calcext:value-type="date"><text:p>10/06/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.749999999999995"  calcext:value-type="float"><text:p>-0.749999999999995</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-11T00:00:00" calcext:value-type="date"><text:p>11/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.51706700379267"  calcext:value-type="float"><text:p>-1.51706700379267</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-11T08:00:00" calcext:value-type="date"><text:p>11/06/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.77833753148615"  calcext:value-type="float"><text:p>-3.77833753148615</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-12T16:00:00" calcext:value-type="date"><text:p>12/06/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.39082058414465"  calcext:value-type="float"><text:p>-1.39082058414465</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-14T12:00:00" calcext:value-type="date"><text:p>14/06/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.60869565217391"  calcext:value-type="float"><text:p>-2.60869565217391</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-15T00:00:00" calcext:value-type="date"><text:p>15/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.884955752212391"  calcext:value-type="float"><text:p>-0.884955752212391</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-15T12:00:00" calcext:value-type="date"><text:p>15/06/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.05882352941177"  calcext:value-type="float"><text:p>-2.05882352941177</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-16T04:00:00" calcext:value-type="date"><text:p>16/06/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.0494752623688"  calcext:value-type="float"><text:p>-1.0494752623688</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-16T20:00:00" calcext:value-type="date"><text:p>16/06/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.75301204819278"  calcext:value-type="float"><text:p>-0.75301204819278</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-17T20:00:00" calcext:value-type="date"><text:p>17/06/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.72023809523809"  calcext:value-type="float"><text:p>-3.72023809523809</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-19T00:00:00" calcext:value-type="date"><text:p>19/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.22511485451762"  calcext:value-type="float"><text:p>-1.22511485451762</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-19T20:00:00" calcext:value-type="date"><text:p>19/06/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0"  calcext:value-type="float"><text:p>0</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-20T04:00:00" calcext:value-type="date"><text:p>20/06/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.467289719626174"  calcext:value-type="float"><text:p>-0.467289719626174</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-21T00:00:00" calcext:value-type="date"><text:p>21/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.83911671924291"  calcext:value-type="float"><text:p>-2.83911671924291</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-23T04:00:00" calcext:value-type="date"><text:p>23/06/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="2.40740740740741"  calcext:value-type="float"><text:p>2.40740740740741</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-24T08:00:00" calcext:value-type="date"><text:p>24/06/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.361010830324926"  calcext:value-type="float"><text:p>-0.361010830324926</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-25T00:00:00" calcext:value-type="date"><text:p>25/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.29276895943562"  calcext:value-type="float"><text:p>-2.29276895943562</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-26T00:00:00" calcext:value-type="date"><text:p>26/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.60142348754448"  calcext:value-type="float"><text:p>-1.60142348754448</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-28T00:00:00" calcext:value-type="date"><text:p>28/06/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.905797101449268"  calcext:value-type="float"><text:p>-0.905797101449268</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-28T08:00:00" calcext:value-type="date"><text:p>28/06/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="8.05008944543828"  calcext:value-type="float"><text:p>8.05008944543828</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-06-29T20:00:00" calcext:value-type="date"><text:p>29/06/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="8.85668276972624"  calcext:value-type="float"><text:p>8.85668276972624</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-02T00:00:00" calcext:value-type="date"><text:p>02/07/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-5.23338048090524"  calcext:value-type="float"><text:p>-5.23338048090524</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-02T16:00:00" calcext:value-type="date"><text:p>02/07/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.30215827338129"  calcext:value-type="float"><text:p>-2.30215827338129</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-03T16:00:00" calcext:value-type="date"><text:p>03/07/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="3.18840579710145"  calcext:value-type="float"><text:p>3.18840579710145</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-05T04:00:00" calcext:value-type="date"><text:p>05/07/2021 04:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="6.53333333333332"  calcext:value-type="float"><text:p>6.53333333333332</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-06T16:00:00" calcext:value-type="date"><text:p>06/07/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.986436498150445"  calcext:value-type="float"><text:p>-0.986436498150445</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-07T00:00:00" calcext:value-type="date"><text:p>07/07/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-3.41047503045065"  calcext:value-type="float"><text:p>-3.41047503045065</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-07T20:00:00" calcext:value-type="date"><text:p>07/07/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-5.36828963795255"  calcext:value-type="float"><text:p>-5.36828963795255</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-09T20:00:00" calcext:value-type="date"><text:p>09/07/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0.832177531206657"  calcext:value-type="float"><text:p>0.832177531206657</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-11T12:00:00" calcext:value-type="date"><text:p>11/07/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.278551532033422"  calcext:value-type="float"><text:p>-0.278551532033422</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-12T16:00:00" calcext:value-type="date"><text:p>12/07/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.278940027894004"  calcext:value-type="float"><text:p>-0.278940027894004</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-14T00:00:00" calcext:value-type="date"><text:p>14/07/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-5.42420027816411"  calcext:value-type="float"><text:p>-5.42420027816411</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-14T16:00:00" calcext:value-type="date"><text:p>14/07/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-0.144300144300147"  calcext:value-type="float"><text:p>-0.144300144300147</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-15T16:00:00" calcext:value-type="date"><text:p>15/07/2021 16:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.55807365439093"  calcext:value-type="float"><text:p>-1.55807365439093</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-17T20:00:00" calcext:value-type="date"><text:p>17/07/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="1.67427701674279"  calcext:value-type="float"><text:p>1.67427701674279</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-18T12:00:00" calcext:value-type="date"><text:p>18/07/2021 12:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.24550898203593"  calcext:value-type="float"><text:p>-2.24550898203593</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-19T00:00:00" calcext:value-type="date"><text:p>19/07/2021 00:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-1.6641452344932"  calcext:value-type="float"><text:p>-1.6641452344932</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-20T20:00:00" calcext:value-type="date"><text:p>20/07/2021 20:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="-2.24358974358975"  calcext:value-type="float"><text:p>-2.24358974358975</text:p></table:table-cell>
+		</table:table-row>
+<table:table-row>
+		<table:table-cell office:value-type="date" office:date-value="2021-07-21T08:00:00" calcext:value-type="date"><text:p>21/07/2021 08:00:00</text:p></table:table-cell>
+		<table:table-cell office:value-type="float" office:value="0"  calcext:value-type="float"><text:p>0</text:p></table:table-cell>
+		</table:table-row>
+</table:table><table:named-expressions /></office:spreadsheet></office:body></office:document>

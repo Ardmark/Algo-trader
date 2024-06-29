@@ -1,0 +1,3 @@
+﻿Tools -> Options -> Keyboard
+Search for 'synchronize class view'
+Assign this to the SHIFT + CTRL + C shortcut

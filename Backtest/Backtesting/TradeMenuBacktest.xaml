@@ -1,0 +1,31 @@
+﻿<Window x:Class="AlgoTrader.Backtest.Windows.TradeMenuBacktest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlgoTrader.Backtest"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        HorizontalContentAlignment="Center"
+        Title="OrderMenu"
+        SizeToContent="WidthAndHeight"
+        >
+
+    <Menu HorizontalAlignment="Stretch" Background="White">
+        <Menu.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel />
+            </ItemsPanelTemplate>
+        </Menu.ItemsPanel>
+        <!--
+        <MenuItem Header="Set Backtest Market Break Order"    Command="{Binding MenuItem0_Command}"></MenuItem>
+        <MenuItem Header="Set Backtest EMA Market Break Order" Command="{Binding MenuItem1_Command}"></MenuItem>
+        <MenuItem Header="Set Backtest Market Order" Command="{Binding MenuItem2_Command}"></MenuItem>
+        <MenuItem Header="Set Backtest Limit Order"  Command="{Binding MenuItem3_Command}" IsEnabled="False"></MenuItem>
+-->
+        <MenuItem Header="Backtest EMA break below"             Command="{Binding MenuItem0_Command}"></MenuItem>
+        <MenuItem Header="Backtest trailing floor" Command="{Binding MenuItem1_Command}"></MenuItem>
+
+
+    </Menu>
+</Window>

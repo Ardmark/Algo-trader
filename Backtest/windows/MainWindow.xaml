@@ -1,0 +1,300 @@
+﻿<Window x:Class="AlgoTrader.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:myAttachedProperties="clr-namespace:AlgoTrader.Live.ViewModels"
+        xmlns:mouseMoveMVVM="clr-namespace:AlgoTrader.Shared"
+        xmlns:local="clr-namespace:AlgoTrader.Windows"
+        mc:Ignorable="d"
+        Closing="DataWindow_Closing"  
+        SizeChanged="Window_SizeChanged"
+        KeyDown="Window_KeyDown"
+        KeyUp="Window_KeyUp"
+        LocationChanged="Window_Moved"
+        MouseLeave="Window_MouseLeave"
+        MouseUp="Window_MouseUp"
+        MouseEnter="Window_MouseEnter"
+        Activated="Window_Activated"
+        Margin="0"
+        Title="{Binding WindowTitle}"
+        Height="1000"
+        Width="1900">
+
+    <Window.Resources>
+        <Style TargetType="MenuItem">
+            <!--<Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="#0a99f3" />
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>-->
+            <Setter Property="MenuItem.Foreground" Value="Black" />
+        </Style>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+
+
+    <Window.InputBindings>
+        <KeyBinding Key="D1" Command="{Binding TimeframeCommand}" CommandParameter="5"/>
+        <KeyBinding Key="D2" Command="{Binding TimeframeCommand}" CommandParameter="15"/>
+        <KeyBinding Key="D3" Command="{Binding TimeframeCommand}" CommandParameter="60"/>
+        <KeyBinding Key="D4" Command="{Binding TimeframeCommand}" CommandParameter="240"/>
+        <KeyBinding Key="D5" Command="{Binding TimeframeCommand}" CommandParameter="1440"/>
+        <KeyBinding Key="N" Modifiers="Control" Command="{Binding NextTradeButton_Click}"/>
+        <KeyBinding Key="P" Modifiers="Control" Command="{Binding PrevTradeButton_Click}"/>
+    </Window.InputBindings>
+
+
+    <Grid RenderOptions.EdgeMode="Aliased" x:Name="BaseGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+
+            <!-- to bind to a different object, just put it as a property in the main view model and reference the binding method from that-->
+
+            <!--Menu-->
+            <Menu Grid.Row="0" x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+
+
+                <MenuItem Header="File">
+                    <MenuItem Header="Backup DB" Command="{Binding BackupDBCommand}" IsEnabled="{Binding BackupDBEnabled}"></MenuItem>
+                    <Separator />
+                    <MenuItem Header="{Binding ConnectionMenuTitle, Mode=OneWay}" Command="{Binding ConnectionCommand}"></MenuItem>
+                    <MenuItem Header="Reset" Command="{Binding RestartCommand}"></MenuItem>
+                </MenuItem>
+                |
+                <MenuItem Header="View" x:Name="ViewMenu">
+                    <MenuItem Header="Account Balances" InputGestureText="B" Command="{Binding GetAccountBalances}"></MenuItem>
+                    <MenuItem Header="Heikin Ashi" InputGestureText="H" Command="{Binding ShowHeikinAshiCommand}" IsChecked="{Binding HeikinAshi_Checked}"></MenuItem>
+                    <MenuItem Header="Show closed trades" InputGestureText="C" Command="{Binding ShowClosedTradesCommand}" IsChecked="{Binding ShowClosedTrades_Checked}"></MenuItem>
+                    <MenuItem Header="Show only active trade" InputGestureText="A" Command="{Binding ShowWaitingTradesCommand}" IsChecked="{Binding ShowOnlyActiveTrade_Checked}"></MenuItem>
+                    <MenuItem Header="Show all trades" InputGestureText="V" Command="{Binding ShowAllTradesCommand}" IsChecked="{Binding ShowAllTrades_Checked}"></MenuItem>
+                    <MenuItem Header="Show floor trades" InputGestureText="F" Command="{Binding ShowFloorTradesCommand}" IsChecked="{Binding ShowFloorTrades_Checked}"></MenuItem>
+                    <MenuItem Header="Show liquidation levels" InputGestureText="L" Command="{Binding ShowLiquidationsCommand}" IsChecked="{Binding ShowLiquidations_Checked}"></MenuItem>
+                    <MenuItem Header="Drawing mode" InputGestureText="D" Command="{Binding DrawingModeCommand}" IsChecked="{Binding DrawingMode_Checked}"></MenuItem>
+                    <MenuItem Header="Time">
+                        <!--
+                        To change these, also change MainViewModel.SetTimeframeMenuState(), and TradeEngine.EMAParametersForTimeframes (dictionary)
+                        -->
+                        <MenuItem Header="5 min" InputGestureText="1" Command="{Binding TimeframeCommand}" CommandParameter="5" IsChecked="{Binding TimeFrame1_Checked}"></MenuItem>
+                        <MenuItem Header="15 min" InputGestureText="2" Command="{Binding TimeframeCommand}" CommandParameter="15" IsChecked="{Binding TimeFrame2_Checked}"></MenuItem>
+                        <MenuItem Header="1 hour" InputGestureText="3" Command="{Binding TimeframeCommand}" CommandParameter="60" IsChecked="{Binding TimeFrame3_Checked}"></MenuItem>
+                        <MenuItem Header="4 hour" InputGestureText="4" Command="{Binding TimeframeCommand}" CommandParameter="240" IsChecked="{Binding TimeFrame4_Checked}"></MenuItem>
+                        <MenuItem Header="Day" InputGestureText="5" Command="{Binding TimeframeCommand}" CommandParameter="1440" IsChecked="{Binding TimeFrame5_Checked}"></MenuItem>
+                    </MenuItem>
+
+                    <MenuItem Header="Invert" InputGestureText="I" Command="{Binding InvertChartCommand}"></MenuItem>
+
+                    <MenuItem Header="Clear log" Command="{Binding ClearLogWindow}"></MenuItem>
+                    <MenuItem Header="List closed trades">
+                        <MenuItem Header="None" CommandParameter="0" Command="{Binding ClearClosedTrades}"></MenuItem>
+                        <MenuItem Header="Last day" CommandParameter="24" Command="{Binding ClearClosedTrades}"></MenuItem>
+                        <MenuItem Header="Last week" CommandParameter="168" Command="{Binding ClearClosedTrades}"></MenuItem>
+                        <MenuItem Header="Last month" CommandParameter="720" Command="{Binding ClearClosedTrades}"></MenuItem>
+                        <MenuItem Header="Last year" CommandParameter="8760" Command="{Binding ClearClosedTrades}"></MenuItem>
+                    </MenuItem>
+
+                    <MenuItem Header="Refresh active trade summary" Command="{Binding RefreshDailyPercent}"></MenuItem>
+                    <!--<MenuItem Header="Remove unused lines" Command="{Binding RemoveUnallocatedLines_Click}" CommandParameter="1" />-->
+                    <Separator />
+                    <MenuItem Header="Show Results" Command="{Binding ShowResults}" CommandParameter="2"></MenuItem>
+                </MenuItem>
+                |
+
+
+                <MenuItem Header="Orders">
+                    <MenuItem Header="Leverage">
+                        <!--also change max number in MainViewModel.SetConcurrentOrdersMenuState() and check there are enough properties-->
+                        <MenuItem Header="1"  Command="{Binding LeverageCommand}" CommandParameter="1"  IsChecked="{Binding Leverage1_Checked}"></MenuItem>
+                        <MenuItem Header="2"  Command="{Binding LeverageCommand}" CommandParameter="2"  IsChecked="{Binding Leverage2_Checked}"></MenuItem>
+                        <MenuItem Header="3"  Command="{Binding LeverageCommand}" CommandParameter="3"  IsChecked="{Binding Leverage3_Checked}"></MenuItem>
+                        <MenuItem Header="4"  Command="{Binding LeverageCommand}" CommandParameter="4"  IsChecked="{Binding Leverage4_Checked}"></MenuItem>
+                        <MenuItem Header="5"  Command="{Binding LeverageCommand}" CommandParameter="5"  IsChecked="{Binding Leverage5_Checked}"></MenuItem>
+                        <MenuItem Header="6"  Command="{Binding LeverageCommand}" CommandParameter="6"  IsChecked="{Binding Leverage6_Checked}"></MenuItem>
+                        <MenuItem Header="7"  Command="{Binding LeverageCommand}" CommandParameter="7"  IsChecked="{Binding Leverage7_Checked}"></MenuItem>
+                        <MenuItem Header="8"  Command="{Binding LeverageCommand}" CommandParameter="8"  IsChecked="{Binding Leverage8_Checked}"></MenuItem>
+                        <MenuItem Header="9"  Command="{Binding LeverageCommand}" CommandParameter="9"  IsChecked="{Binding Leverage9_Checked}"></MenuItem>
+                        <MenuItem Header="10" Command="{Binding LeverageCommand}" CommandParameter="10" IsChecked="{Binding Leverage10_Checked}"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Max. concurrent orders">
+                        <!--also change max number in MainViewModel.SetConcurrentOrdersMenuState() and check there are enough properties-->
+                        <MenuItem Header="1"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="1"  IsChecked="{Binding ConcurrentOrders1_Checked}"></MenuItem>
+                        <MenuItem Header="2"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="2"  IsChecked="{Binding ConcurrentOrders2_Checked}"></MenuItem>
+                        <MenuItem Header="3"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="3"  IsChecked="{Binding ConcurrentOrders3_Checked}"></MenuItem>
+                        <MenuItem Header="4"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="4"  IsChecked="{Binding ConcurrentOrders4_Checked}"></MenuItem>
+                        <MenuItem Header="5"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="5"  IsChecked="{Binding ConcurrentOrders5_Checked}"></MenuItem>
+                        <MenuItem Header="6"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="6"  IsChecked="{Binding ConcurrentOrders6_Checked}"></MenuItem>
+                        <MenuItem Header="7"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="7"  IsChecked="{Binding ConcurrentOrders7_Checked}"></MenuItem>
+                        <MenuItem Header="8"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="8"  IsChecked="{Binding ConcurrentOrders8_Checked}"></MenuItem>
+                        <MenuItem Header="9"  Command="{Binding ConcurrentOrdersCommand}" CommandParameter="9"  IsChecked="{Binding ConcurrentOrders9_Checked}"></MenuItem>
+                        <MenuItem Header="10" Command="{Binding ConcurrentOrdersCommand}" CommandParameter="10" IsChecked="{Binding ConcurrentOrders10_Checked}"></MenuItem>
+                        <MenuItem Header="11" Command="{Binding ConcurrentOrdersCommand}" CommandParameter="11" IsChecked="{Binding ConcurrentOrders11_Checked}"></MenuItem>
+                        <MenuItem Header="12" Command="{Binding ConcurrentOrdersCommand}" CommandParameter="12" IsChecked="{Binding ConcurrentOrders12_Checked}"></MenuItem>
+                    </MenuItem>
+                    
+                    <MenuItem Header="Set TP percent"  Command="{Binding AutoSetTPPercentCommand}"></MenuItem>
+
+                    <Separator />
+                    <!--<MenuItem Header="Run test trade" Command="{Binding RunTestTradeCommand}"></MenuItem>
+                    <Separator />-->
+
+                        <MenuItem Header="Stop unentered orders" Command="{Binding StopUnenteredOrdersCommand}"></MenuItem>
+
+
+                        <!--<MenuItem Header="{Binding RunBacktestForSymbolHeader}" Command="{Binding RunBacktestsForSymbolCommand}" CommandParameter="1"></MenuItem>
+                        <MenuItem Header="{Binding RunAllBacktestHeader}" Command="{Binding RunAllBacktestsCommand}" CommandParameter="1"></MenuItem>
+                        <MenuItem Header="{Binding PauseBacktestHeader}" Command="{Binding PauseBacktestCommand}" IsEnabled="{Binding PauseBacktestEnabled}"></MenuItem>
+                        <MenuItem Header="{Binding RunBatchBacktestHeader}" Command="{Binding RunBatchBacktestsCommand}" CommandParameter="1"></MenuItem
+                        <Separator />
+                        <MenuItem Header="Set backtest timeframe to 1" Command="{Binding SetBacktestTimeframe}" CommandParameter="1"></MenuItem>
+                        <MenuItem Header="Set backtest timeframe to 5" Command="{Binding SetBacktestTimeframe}" CommandParameter="5"></MenuItem>
+                        <MenuItem Header="Set backtest timeframe to 15" Command="{Binding SetBacktestTimeframe}" CommandParameter="15"></MenuItem>
+                        <MenuItem Header="Set backtest timeframe to 60" Command="{Binding SetBacktestTimeframe}" CommandParameter="60"></MenuItem>-->
+                        <!--<MenuItem Header="Clear backtests" Command="{Binding ClearBacktestsCommand}" CommandParameter="1"></MenuItem>-->
+
+
+
+                    <!--
+                    <MenuItem Header="Auto order">
+                        <MenuItem Header="{Binding EnableLiveTradingAutoHeader}" Command="{Binding EnableLiveTradingCommand}" IsEnabled="False"></MenuItem>
+                        <Separator />
+                        <MenuItem Header="{Binding RunBacktestForSymbolHeader}" Command="{Binding RunBacktestsForSymbolCommand}" CommandParameter="2"></MenuItem>
+                        <MenuItem Header="{Binding RunAllBacktestHeader}" Command="{Binding RunAllBacktestsCommand}" CommandParameter="2"></MenuItem>
+                        <MenuItem Header="{Binding PauseBacktestHeader}" Command="{Binding PauseBacktestCommand}" IsEnabled="{Binding PauseBacktestEnabled}"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Remove unentered orders" Command="{Binding RemoveUnenteredOrdersCommand}"></MenuItem>
+                    <MenuItem Header="Reset max. entry time" Command="{Binding ResetMaxEntryTimeCommand}"></MenuItem>-->
+                </MenuItem>
+                <MenuItem Header="Symbols" ItemsSource="{Binding SymbolMenu, Mode=TwoWay}"></MenuItem>
+
+            </Menu>
+
+            <TextBox Grid.Row="0" TextWrapping="Wrap" Margin="6,0,0,0" Text="{Binding SymbolName, Mode=OneWay}"  Width="96"/>
+            <TextBox Grid.Row="0" TextWrapping="Wrap" Text="{Binding UI_Interval, Mode=TwoWay}" IsEnabled="False" Width="60"/>
+
+            <Button Command="{Binding KillOrders_Click}" CommandParameter="0" Content="x Kill Trades" Margin="15,0,5,0" Padding="5, 0, 5, 0" />     
+            <Button Command="{Binding MoveStops_Click}" CommandParameter="0" Content="+ Increase stops" Margin="10,0,5,0" Padding="5, 0, 5, 0" />
+            <Button Command="{Binding MoveStops_Click}" CommandParameter="1" Content="- Decrease stops" Margin="0,0,5,0" Padding="5, 0, 10, 0" />
+            <Button Command="{Binding ToggleFloor_Click}" CommandParameter="0" Content="Show / hide F" Margin="10,0,5,0" Padding="5, 0, 5, 0" />
+            <Button Command="{Binding ToggleLiquidation_Click}" CommandParameter="0" Content="Show / hide L" Margin="0,0,5,0" Padding="5, 0, 5, 0" />
+
+             <!--<Button Command="{Binding SetOrderButton_Click}" CommandParameter="0" Content="+L" Width="20" Margin="5,0,5,0"/> see notes in MainViewModel.RestartTrade() as to why this was dropped -->
+            <!--<Button Command="{Binding SetOrderButton_Click}" CommandParameter="1" Content="+S" Width="20" Margin="5,0,5,0"/> -->
+            <Button Command="{Binding CleanupTrades_Click}" CommandParameter="0" Content="Trades cleanup" Margin="10,0,5,0" Padding="5, 0, 5, 0" />
+            <Button Command="{Binding CleanupLines_Click}" CommandParameter="0" Content="Lines cleanup" Margin="0,0,5,0" Padding="5, 0, 5, 0" />
+            <Button Command="{Binding CleanupTradesAndLines_Click}" CommandParameter="0" Content="Trades and Lines cleanup" Margin="0,0,5,0" Padding="5, 0, 5, 0" />
+           <!--<TextBox  Grid.Row="0" TextWrapping="Wrap" Margin="6,0,0,0" IsEnabled="False" Text="{Binding ProgressPercent, Mode=OneWay}" Width="100"></TextBox>
+            <TextBox  Grid.Row="0" TextWrapping="Wrap" Margin="6,0,0,0" IsEnabled="False" Text="{Binding ProgressPercent1, Mode=OneWay}" Width="60"></TextBox>-->
+            <TextBox Grid.Row="0" TextWrapping="Wrap" Margin="6,0,0,0" Text="{Binding CurrentPrice, Mode=OneWay}" IsEnabled="False" Width="75"/>
+            <TextBox Grid.Row="0" TextWrapping="Wrap" Margin="6,0,0,0" Text="{Binding CountDownText, Mode=OneWay}" IsEnabled="False" Width="95"/>
+    
+        </StackPanel>
+
+        <Grid x:Name="PanelsContainer" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="327*" />
+                <ColumnDefinition Width="619*"/>
+
+                <!--
+                <ColumnDefinition Width="200" />-->
+            </Grid.ColumnDefinitions>
+            <i:Interaction.Behaviors>
+                <!--bind custom mouse properties to the view model, these custom properties are defined in MouseBehaviour.cs-->
+                <mouseMoveMVVM:MouseBehaviour MouseWheel="{Binding MouseWheel, Mode=OneWayToSource}" MouseDown="{Binding MouseDown, Mode=OneWayToSource}" MouseUp="{Binding MouseUp, Mode=OneWayToSource}" MouseRightButtonDown="{Binding MouseRightButtonDown, Mode=OneWayToSource}" MouseX="{Binding MouseMoveX, Mode=OneWayToSource}" MouseY="{Binding MouseMoveY, Mode=OneWayToSource}" />
+                <!--                <mouseMoveMVVM:MouseBehaviour MouseWheel="{Binding MouseWheel, Mode=OneWayToSource}" MouseDown="{Binding MouseDown, Mode=OneWayToSource}"  MouseRightButtonUp="{Binding MouseRightButtonUp, Mode=OneWayToSource}" MouseLeftButtonUp="{Binding MouseLeftButtonUp, Mode=OneWayToSource}" MouseUp="{Binding MouseUp, Mode=OneWayToSource}" MouseX="{Binding MouseMoveX, Mode=OneWayToSource}" MouseY="{Binding MouseMoveY, Mode=OneWayToSource}" />-->
+            </i:Interaction.Behaviors>
+
+            <Grid Grid.Row="0"  Grid.Column="0" x:Name="MainGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="2" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="8*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="707*" />
+                    <ColumnDefinition Width="975*"/>
+                    <ColumnDefinition Width="110*" />
+                    <!-- sidebar-->
+                </Grid.ColumnDefinitions>
+
+                <Canvas Grid.Row="0" x:Name="Chart" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White" Margin="0,0,0,0" ClipToBounds="True" Grid.ColumnSpan="2"></Canvas>
+
+                <Canvas Grid.Row="1" x:Name="Indicator1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Background="White" Margin="0,5,0,5"  ClipToBounds="True" Grid.ColumnSpan="2"/>
+                <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="Gray" ShowsPreview="true" ResizeDirection="Rows" Height="2" Grid.ColumnSpan="2"/>
+                <Canvas Grid.Row="2" x:Name="TimeBar" Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+                <Grid Grid.Row="3" HorizontalAlignment="Stretch" x:Name="TextBoxesGrid" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Grid.Row="0" HorizontalScrollBarVisibility="Visible" Grid.Column="0" Margin="0" Padding="5" TextWrapping="NoWrap" VerticalScrollBarVisibility="Visible" Text="{Binding LogText}"  AcceptsReturn="False" IsReadOnly="True" myAttachedProperties:TextBoxAttachedProperties.AutoScrollToEnd="True" ></TextBox>
+                    <TextBox Grid.Row="0" HorizontalScrollBarVisibility="Visible" Grid.Column="1" Margin="0" Padding="5" TextWrapping="WrapWithOverflow" VerticalScrollBarVisibility="Visible" Text="{Binding TradeText}"  AcceptsReturn="False"   IsReadOnly="True" myAttachedProperties:TextBoxAttachedProperties.AutoScrollToEnd="True" ></TextBox>
+                    <GridSplitter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" Background="Gray" ShowsPreview="true" ResizeDirection="Columns" Width="2"/>
+                </Grid>
+
+                <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="Gray" ShowsPreview="true" ResizeDirection="Rows" Height="2" Grid.ColumnSpan="2"/>
+
+
+                <!-- Sidebar-->
+                <!-- Do not put this in a parent grid, the panels container will always get the full window width-->
+                <Canvas Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" x:Name="SidePanel" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  />
+                <GridSplitter Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" HorizontalAlignment="Left" VerticalAlignment="Stretch" Background="Gray" ShowsPreview="true" ResizeDirection="Columns" Width="2"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2" x:Name="ButtonsContainer" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition />
+                <ColumnDefinition Width="90"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Canvas Grid.Column="0">
+                <StackPanel Orientation="Horizontal" Canvas.Left="0">
+                    <Button Command="{Binding Scrollbutton1_Click}" Content="[" Width="30" Height="30" />
+                    <Button Command="{Binding Scrollbutton2_Click}" Content="&lt;&lt;"  Width="30" Height="30" />
+                    <Button Command="{Binding Scrollbutton3_Click}" Content="&lt;"  Width="30" Height="30" />
+                    <Button Command="{Binding PrevTradeButton_Click}" Content="Previous Trade" Width="100" Height="30" />
+                </StackPanel>
+            </Canvas>
+            <Canvas Grid.Column="1" HorizontalAlignment="Center">
+                <Button Command="{Binding Scalebutton1_Click}" Grid.Column="2" Content="-"  Width="30" Height="30" Canvas.Left="-15"  />
+                <Button Command="{Binding Scalebutton2_Click}" Grid.Column="2" Content="+" Width="30" Height="30" Canvas.Left="15" />
+            </Canvas>
+            <Canvas Grid.Column="2" >
+                <StackPanel Orientation="Horizontal" Canvas.Left="-100">
+                    <Button Command="{Binding NextTradeButton_Click}" Grid.Column="2" Content="Next Trade" Width="100"  Height="30"  />
+                    <Button Command="{Binding Scrollbutton4_Click}" Grid.Column="2" Content="&gt;"  Width="30" Height="30"  />
+                    <Button Command="{Binding Scrollbutton5_Click}" Grid.Column="2" Content="&gt;&gt;" Width="30" Height="30" />
+                    <Button Command="{Binding Scrollbutton6_Click}" Grid.Column="2" Content="]" Width="30" Height="30"   />
+                </StackPanel>
+            </Canvas>
+        </Grid>
+    </Grid>
+
+</Window>

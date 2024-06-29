@@ -1,0 +1,9 @@
+{
+  "name": "node-js-adapter-binance",
+  "version": "0.0.0",
+  "description": "NodeJS Adapter Binance",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

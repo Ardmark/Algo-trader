@@ -1,0 +1,4 @@
+﻿If unable to run live release build, 
+1) go to Windows Security -> Virus & threat protection, click 'Protection history'
+2) click the 'Threat' item and then the 'Actions' button
+3) restore the item, it will then run.

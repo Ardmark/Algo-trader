@@ -1,0 +1,26 @@
+Key mappings:
+
+X:				Delete line or trade currently under cursor (NOTE - DEL and BACKSPACE lose capture whenever cursor is clicked on another panel. NO idea, only affects these 2 keys.)
+1, 2, 3, 4:		Select timeframe
+
+A:				Show / hide active trade only (toggle)
+F:				Show / hide floor trades (toggle)
+L:				Show / hide liquidations (toggle)
+C:				Show / hide closed trades (toggle)
+V:				Show / hide all trades (toggle)
+D:				Toggle draw mode
+
+8				Set break even at price (show dialog)
+9				Set ceiling at price (show dialog)
+0				Set floor at price (show dialog)
+B:				Show account balances
+H:				Toggle heikin ashi
+S:				Go to next symbol
+S + L-SHIFT:	Go to previous symbol
+R:				Go to next running symbol
+C:				Go to next closed symbol
+ESC:			Hide selection area box, stop drawing line, stop playing sound
+K:				Backtest symbol with trade type (auto or manual) as hard-coded parameter
+Q:				Stop backtest (mapped in Backtest_base)
+Z:				Step backtest
+I:				Invert chart

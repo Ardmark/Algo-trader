@@ -1,0 +1,63 @@
+To install this project on a new system, this is the complete list of steps involved.
+
+====================================================================
+
+The only files which are necessary to run the app are:
+
+	C:\Users\[whatever sub folders]\Algo Trader - v3
+		\Live 
+			\bin
+			\Logs
+		\NodeJS Adapter Binance
+
+	The node_modules folder, to be installed in C:\Users\[username]
+
+	The database .mdf and .ldf files, which should be in C:\AlgoTrader databases\Live
+
+====================================================================
+
+Installations required:
+
+	Install SQL Server Management Studio (SSMS)
+	Install Visual Studio
+	Install node.js (nodejs.org/en/download) - this will install in Program Files\nodejs
+
+Node.js:
+
+	Duplicate node.exe to node_trading.exe and node_working.exe
+	Copy the node_modules folder to C:\Users\[username]
+	 - note, there is another node_module folder in Program Files\nodejs\, not to be confused with this one.
+	 - There is no need to 'npm install binance' from Package Manager Console, this project seems to be no longer available anyway.
+
+Database:
+
+	In Visual Studio Installer, go to 'Modify', choose 'Individual Components', and install the following:
+		Sql Server Express 2019 local DB
+		Sql Server ODBC driver
+		Sql Server Command Line Utilities
+		Sql Server Data Tools
+
+		(choosing the first one may automatically select the others)
+
+ In SSMS, connect to the server. To do this, the settings are:
+		Server type:		Database Engine
+		Server name:		(localdb)\MSSQLLocalDB
+		Authentication:		Windows Authentication.
+
+	Note, the Server name is not pre-populated in a drop down, this must be typed in manually.
+
+	Choose Restore Database (r-click Databases) and restore a .bak file to the database folder. The database name must match the value in App.config
+	It will be necessary to move the .mdf and .ldf files from the default restore location (probably C:\Users\[username]) to the database folder (i.e. C:\AlgoTrader databases\Live).
+	
+To set up the backtest project database: if there is no database available to copy across, then either:
+	do a BACPAC of the live database and create backup db from that, or:
+	create the database in SSMS and use the 'copy table.sql' script to copy data over as required.
+
+Visual Studio:
+
+	Build the project - at time of writing, it will be necessary to remove the reference to System.Value.Tuple as the new installation of VS will include this in mscorlib
+
+
+
+
+

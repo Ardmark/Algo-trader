@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{FDEDDFBF-D113-4E64-9F6F-4B4BDB4487AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backtest", "Backtest\Backtest.csproj", "{354184E0-93DF-4576-8D1D-C6A18D8BA41A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bitmex", "Bitmex\Bitmex.csproj", "{7C586E73-2536-4F5C-AD5A-BFCF35CAA320}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1715D307-1074-478F-8A4F-6D32564F185D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		1 - get last timestamp for archive.sql = 1 - get last timestamp for archive.sql
+		2 - copy recent items to archive.sql = 2 - copy recent items to archive.sql
+		3 - clear old items from live symboldataitems.sql = 3 - clear old items from live symboldataitems.sql
+		all etf.sql = all etf.sql
+		Backup and restore DB, clean out LDF file.txt = Backup and restore DB, clean out LDF file.txt
+		copy table.sql = copy table.sql
+		drop tables.sql = drop tables.sql
+		Install on new system.txt = Install on new system.txt
+		LImit LDF file size.txt = LImit LDF file size.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sql scripts", "sql scripts", "{F121ECD2-6788-449E-A246-06D31016579A}"
+	ProjectSection(SolutionItems) = preProject
+		1 - get last timestamp for archive.sql = 1 - get last timestamp for archive.sql
+		2 - copy recent items to archive.sql = 2 - copy recent items to archive.sql
+		3 - clear old items from live symboldataitems.sql = 3 - clear old items from live symboldataitems.sql
+		Backtest\Copy from live to backtest.sql = Backtest\Copy from live to backtest.sql
+		copy table.sql = copy table.sql
+	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Bitmex connectors", "Bitmex connectors\Bitmex connectors.njsproj", "{A447F77D-CC54-41BB-A8C8-C94D89F239AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binance", "Binance\Binance.csproj", "{2E8AE230-12B7-403D-9FBD-65CADA60A8C5}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Binance connectors", "Binance connectors\Binance connectors.esproj", "{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{354184E0-93DF-4576-8D1D-C6A18D8BA41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354184E0-93DF-4576-8D1D-C6A18D8BA41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354184E0-93DF-4576-8D1D-C6A18D8BA41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354184E0-93DF-4576-8D1D-C6A18D8BA41A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C586E73-2536-4F5C-AD5A-BFCF35CAA320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C586E73-2536-4F5C-AD5A-BFCF35CAA320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C586E73-2536-4F5C-AD5A-BFCF35CAA320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C586E73-2536-4F5C-AD5A-BFCF35CAA320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A447F77D-CC54-41BB-A8C8-C94D89F239AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A447F77D-CC54-41BB-A8C8-C94D89F239AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A447F77D-CC54-41BB-A8C8-C94D89F239AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A447F77D-CC54-41BB-A8C8-C94D89F239AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E8AE230-12B7-403D-9FBD-65CADA60A8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E8AE230-12B7-403D-9FBD-65CADA60A8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E8AE230-12B7-403D-9FBD-65CADA60A8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E8AE230-12B7-403D-9FBD-65CADA60A8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD49F713-3927-4611-AC7B-C7DBB8FAF5AE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE58243D-71EB-42B0-AA3D-C9929A90871A}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{2e8ae230-12b7-403d-9fbd-65cada60a8c5}*SharedItemsImports = 4
+		Shared\Shared.projitems*{354184e0-93df-4576-8d1d-c6a18d8ba41a}*SharedItemsImports = 4
+		Shared\Shared.projitems*{7c586e73-2536-4f5c-ad5a-bfcf35caa320}*SharedItemsImports = 4
+		Shared\Shared.projitems*{fdeddfbf-d113-4e64-9f6f-4b4bdb4487ab}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fdeddfbf-d113-4e64-9f6f-4b4bdb4487ab</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\_ChartLine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\Drawings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\PendingTradeRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\AlertDialog.xaml.cs">
+      <DependentUpon>AlertDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\LineMenuShiftClick.xaml.cs">
+      <DependentUpon>LineMenuShiftClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\OrderExecutionMenuShiftClick.xaml.cs">
+      <DependentUpon>OrderExecutionMenuShiftClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\OrderPlacementMenuShiftClick.xaml.cs">
+      <DependentUpon>OrderPlacementMenuShiftClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\ResultsWindow.xaml.cs">
+      <DependentUpon>ResultsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exchange connection\BitMEXAPI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PriceFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SpreadsheetBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IMainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainObj - UI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainObj.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MouseBehaviour.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\SymbolDataItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataObjects\Trade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CommandHandlers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LinearRegression.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Log.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\HMA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\WMA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\EMA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\MACD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\TimeFrameAggregator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\MovingAverage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\SMA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Moving averages\Stochastic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\HMA_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\HeikinAshi_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Trade systems manual\Order_MACrossUp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Trade systems manual\Order_PriceBreakHMA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Trade systems manual\Order_PriceBreakMACD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\TradeEngineBitmex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\TradeEngine - Exchange trade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\TradeEngine - UI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\TradeEngineBinance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ActiveTradeSummary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Candle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Chart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\EMA_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\MACD_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Order.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Trade systems manual\Order_PricetBreak.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ChartLine - UI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\DrawingBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ChartLine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\DisplayPanel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\Ribbon_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\SMA_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\Stochastic_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\TradeEngine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Trading\Indicators\TradingRange_Indicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exchange connection\ExchangeDataProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exchange connection\ExchangeDataProcessorBinance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exchange connection\ExchangeDataProcessorBitmex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exchange connection\ExchangeConnector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\DrawingObjects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PopupMenuViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\OrderExecutionMenu.xaml.cs">
+      <DependentUpon>OrderExecutionMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\SetOrderAtPriceDialog.xaml.cs">
+      <DependentUpon>SetOrderAtPriceDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\OrderPlacementMenu.xaml.cs">
+      <DependentUpon>OrderPlacementMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\OrderMenuImpl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ResultsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Exchange connection\Testnet login.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)KEY MAPPINGS" />
+    <Content Include="$(MSBuildThisFileDirectory)Media\alarm-clock-ringing-02 .mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Media\alarm-clock-ringing-01.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\AlertDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\LineMenuShiftClick.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\OrderExecutionMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\OrderExecutionMenuShiftClick.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\OrderPlacementMenuShiftClick.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\ResultsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\SetOrderAtPriceDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\OrderPlacementMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

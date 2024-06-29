@@ -1,0 +1,91 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Binance connectors</Name>
+    <RootNamespace>NodeJS Adapter Binance</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2f137afe-f755-433e-bfec-68f9670af4be</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>connector.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="csharpconnector\commands.js" />
+    <Compile Include="csharpconnector\connector.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="node_modules\binance\" />
+    <Folder Include="node_modules\binance\lib\" />
+    <Folder Include="node_modules\binance\node_modules\" />
+    <Folder Include="node_modules\binance\node_modules\bignumber.js\" />
+    <Folder Include="node_modules\binance\node_modules\bignumber.js\doc\" />
+    <Folder Include="node_modules\binance\node_modules\ws\" />
+    <Folder Include="node_modules\binance\node_modules\ws\lib\" />
+    <Folder Include="csharpconnector\" />
+    <Folder Include="node_modules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="node_modules\binance\CHANGELOG.md" />
+    <Content Include="node_modules\binance\lib\beautifier.js" />
+    <Content Include="node_modules\binance\lib\binance.js" />
+    <Content Include="node_modules\binance\lib\processor.js" />
+    <Content Include="node_modules\binance\lib\rest.js" />
+    <Content Include="node_modules\binance\lib\ws.js" />
+    <Content Include="node_modules\binance\LICENSE" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\bignumber.js" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\bignumber.min.js" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\bignumber.min.js.map" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\bignumber.mjs" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\CHANGELOG.md" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\doc\API.html" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\LICENCE.md" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\package.json" />
+    <Content Include="node_modules\binance\node_modules\bignumber.js\README.md" />
+    <Content Include="node_modules\binance\node_modules\ws\index.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\.DS_Store" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\BufferUtil.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\Constants.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\ErrorCodes.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\EventTarget.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\Extensions.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\PerMessageDeflate.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\Receiver.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\Sender.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\Validation.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\WebSocket.js" />
+    <Content Include="node_modules\binance\node_modules\ws\lib\WebSocketServer.js" />
+    <Content Include="node_modules\binance\node_modules\ws\LICENSE" />
+    <Content Include="node_modules\binance\node_modules\ws\package.json" />
+    <Content Include="node_modules\binance\node_modules\ws\README.md" />
+    <Content Include="node_modules\binance\package.json" />
+    <Content Include="node_modules\binance\README.md" />
+    <Content Include="README.md" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\binance\node_modules\bignumber.js\bignumber.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>

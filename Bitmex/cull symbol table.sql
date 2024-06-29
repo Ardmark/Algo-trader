@@ -1,0 +1,1 @@
+﻿delete from [AlgoTrader.DataContext.Live].dbo.SymbolDataItems where timestamp < 'yyyy-mm-dd'

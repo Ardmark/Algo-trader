@@ -1,0 +1,15 @@
+BACKUP AND RESTORE DATABASE:
+
+Backup is done automatically or from the File menu, this creates a .bak file
+
+To restore:
+1) Must create the database first, this can be done in Microsoft SQL Server Management Studio but name MUST match the backed up database name
+2) In Microsoft SQL Server Management Studio:
+	R-click Databases and choose Restore Database
+	Select Device as source, click Add and browse to .bak file
+	Select Destination database
+That's it.
+
+Note, that a Bacpac file will be MUCH smaller, restoring from backup will also restore the .ldf file which will bloat.
+To clean this out, do a Bacpac backup - restore.
+

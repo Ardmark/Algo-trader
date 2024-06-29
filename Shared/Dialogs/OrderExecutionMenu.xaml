@@ -1,0 +1,40 @@
+﻿<Window x:Class="AlgoTrader.Shared.Windows.OrderExecutionMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlgoTrader.Shared"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="OrderMenu"
+        SizeToContent="WidthAndHeight"
+        >
+
+    <Menu HorizontalAlignment="Stretch" Background="White">
+        <Menu.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel />
+            </ItemsPanelTemplate>
+        </Menu.ItemsPanel>
+        <!--
+        <MenuItem Header="! Congestion pattern"         Command="{Binding MenuItem0_Command}"></MenuItem>
+        <MenuItem Header="! First break"                Command="{Binding MenuItem1_Command}"></MenuItem>
+        <MenuItem Header="! Flag"                       Command="{Binding MenuItem2_Command}"></MenuItem>
+        <MenuItem Header="! Flat range"                 Command="{Binding MenuItem3_Command}"></MenuItem>
+        <MenuItem Header="! Retracement"                Command="{Binding MenuItem4_Command}"></MenuItem>
+        <MenuItem Header="! Rising from retracement"    Command="{Binding MenuItem5_Command}"></MenuItem>
+        <MenuItem Header="! Unclassified"               Command="{Binding MenuItem6_Command}"></MenuItem>-->
+
+        <MenuItem Header="Edit trade set"               Command="{Binding MenuItem0_Command}"></MenuItem>
+        <Separator></Separator>
+        <MenuItem Header="Remove trade"                 Command="{Binding MenuItem1_Command}"></MenuItem>
+        <MenuItem Header="Remove trade and line"        Command="{Binding MenuItem2_Command}"></MenuItem>
+
+        <Separator></Separator>
+        <MenuItem Header="Close Order"                  Command="{Binding MenuItem3_Command}"></MenuItem>
+        <Separator />
+        <MenuItem Header="Adjust timeframe"             Command="{Binding MenuItem4_Command}"></MenuItem>
+        <Separator />
+        <MenuItem Header="Mark as synchronised"         Command="{Binding MenuItem5_Command}"></MenuItem>
+    </Menu>
+</Window>

@@ -1,0 +1,17 @@
+
+1) Install node.js
+2) See if Node is installed or not. Run the PowerShell and type command node –v and press enter. It prints Node.js version something like v6.10.0
+3) See if NPM is installed type npm –v in the window. If its prints version number such as 3.10.10 that means NPM has been installed.
+4) Run some js sample to test that Node.js works on system. First starts Node.js using command “node”. Javascript can now be typed in and it will execute, i.e type 'console.log(“Hello Node Js”);' in the shell window and run it. 
+5) .exit will exit from node.js in Powershell
+6) Type 'node ' followed by the script to execute. This should be test/test.js (full path, in double quotes to allow the spaces). This will probably not work due to missing modules.
+   To install missing modules:
+   npm i -g npm
+   npm i --save [module name] 
+
+   the missing modules will probably be: lodash, eventemitter2, debug, ws, superagent
+
+7) Try to execute the test script again. It will output a live data feed, continually updated, when running. Close Powershell to stop script.
+
+8) If not already done, install node.js template and project on VS
+

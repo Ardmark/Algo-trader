@@ -1,0 +1,1 @@
+﻿Can't seem to copy these over to the Shared/Dialogs folder any more, so will need to duplicate these between projects.
